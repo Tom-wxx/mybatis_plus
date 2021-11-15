@@ -6,4 +6,12 @@ import lombok.Data;
 public class CppClass {
     private Integer id;
     private  String email;
+
+
+    private String Name;
+
+
+
+    private String pwd;
+
 }

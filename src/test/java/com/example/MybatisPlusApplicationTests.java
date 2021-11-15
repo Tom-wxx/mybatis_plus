@@ -3,7 +3,7 @@ package com.example;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.example.mapper.UsersMapper;
 import com.example.pojo.Users;
-import jdk.nashorn.internal.ir.CallNode;
+
 import org.apache.ibatis.logging.stdout.StdOutImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +32,7 @@ class MybatisPlusApplicationTests {
     @Test
     public void testInsert(){
         Users user=new Users();
-        user.setName("王祥祥c++");
+        user.setName("王++");
         user.setAge(18);
         user.setPassword("12");
         int insert = usersMapper.insert(user);  //帮我们自动生成id
@@ -45,9 +45,9 @@ class MybatisPlusApplicationTests {
     public void testUpdate(){
         Users user=new Users();
         //通过条件自动拼接动态sql
-        user.setId(1402629900297371652L);//注意长整型后面加 L
-        user.setName("er祥java编程");
-        user.setPassword("134");
+        user.setId(1402629900297371656L);//注意长整型后面加 L
+        //user.setName("erva编程");
+        user.setPassword("13dss4");
         int update = usersMapper.updateById(user);
         System.out.println(update);
     }
@@ -58,8 +58,8 @@ class MybatisPlusApplicationTests {
         //1.查询用户信息
         Users users = usersMapper.selectById(1402629900297371650l);
         //2.修改用户信息
-        users.setName("狂神");
-        users.setPassword("822");
+       // users.setName("狂神");
+        users.setPassword("85552");
         //3.执行更新操作
         usersMapper.updateById(users);
     }
